@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #98c1d1 0%, #4d6b83 100%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.chat-container {
+    display: grid;
+    grid: 
+        'search-container chat-titile' 71px
+        'conversation-list chat-message-list' 1fr
+        'new-message-container chat-form' 78px
+        / 275px 1fr;
+    min-width: 800px;
+    max-width: 1000px;
+    max-height: 500px;
+    width: 100%;
+    height: 95vh;
+    background: #FFF;
+    border-radius: 10px;
+}
+
+.search-container,
+.list,
+.new-message-container {
+    background: rgb(153, 201, 241);
+}
+
+.search-container {
+    display: grid;
+    align-items: center;
+    padding: 0 20px;
+    padding-right: 20px;
+    grid-area: search-container;
+    border-radius: 10px 0 0 0;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+
+
+.search-container input {
+    float: left;
+    color: #eee;
+    outline: none;
+    font-weight: bold;
+    border-radius: 2px;
+    height: 30px;
+    border: 0;
+    padding-left: 50px;
+    padding-right: 0;
+    font-size: 0.7rem;
+    background: url('../1200px-Search_icon-72a7cf.png') no-repeat rgb(113, 155, 194);
+    background-position: 13px center;
+    background-size: 15px 15px;
+}
+
+.search-container input::placeholder {
+    color: #ddd;
+    font-weight: bold;
+}
+
+.list {
+    grid-area: conversation-list;
+    overflow-y: scroll;
+}
+
+.conversation {
+    display: grid;
+    grid-template-columns: 40px 1fr max-content;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(113, 155, 194);
+    padding: 15px;
+}
+
+.conversation.active,
+.conversation:hover { 
+    background: rgb(113, 155, 194);
+}
+
+.conversation:hover {
+    cursor: pointer;
+}
+
+.conversation > img {
+    grid-row: span 2;
+    height: 30px;
+    border-radius: 100%;
+
+}
+
+.users {
+    padding: 6px 0 0 0;
+    font-weight: bold;
+    color: #eee;
+    text-overflow: ellipsis;
+}
+
+.new-message-container {
+    display: grid;
+    grid: 30px / 30px;
+    align-content: center;
+    grid-area: new-message-container;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-radius: 0 0 0 10px;
+    padding: 0 15px;
+}
+
+.new-message-container a {
+    display: grid;
+    place-content: center center;
+    background: #eee;
+    border-radius: 100%;
+    color: rgb(135, 183, 223);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.chat-title,
+.chat-form {
+    background: #eee;
+}
+
+.chat-title > img {
+    cursor: pointer;
+}
+
+.chat-message-list {
+    grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    overflow-y: scroll;
+}
+
+.message-row {
+    display: grid;
+    grid-template-columns: 70%;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #98c1d1;
+    font-weight: bold;
+}
+
+.you-message {
+    justify-content: end;
+    justify-items: end;
+}
+
+.other-message {
+    justify-items: start;
+}
+
+.message-text {
+    padding: 9px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.status {
+    font-size: 0.7rem;
+    color: rgb(232, 244, 255);
+    font-style: italic;
+    padding: 8px;
+}
+
+.message-time {
+    font-size: 0.7rem;
+    color: #777;
+}
+
+.you-message .message-text {
+    background: #4d6b83;
+    color: #eee;
+    border: 1px solid #4d6b83;
+    border-radius: 14px 14px 0 14px;
+
+}
+
+.other-message .message-text {
+    background: #eee;
+    color: #111;
+    border: 1px solid #98c1d1;
+    border-radius: 14px 14px 14px 0;
+    
+}
+
+.chat-form {
+    display: grid;
+    grid: 10px / 130px 470px 4fr;
+    align-content: center;
+    align-items: center;
+    grid-gap: 15px;
+    grid-area: chat-form;
+    border-radius: 0 0 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.chat-form input {
+    padding: 10px;
+    outline: none;
+    border: 2px solid #ddd;
+    color: #330;
+    border-radius: 6px;
+    font-size: o.7rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+b {
+    color: #98c1d1;
+}
+
+p {
+    background: #4d6b83;
+    color: #eee;
+    border: 1px solid #4d6b83;
+    border-radius: 14px 14px 0 14px;
+    padding: 9px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+p {
+    justify-content: end;
+    justify-items: end;
+}
+
+.fon {
+    grid-area: fon;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    overflow-y: scroll;
+}

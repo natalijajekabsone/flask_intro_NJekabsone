@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css" media="screen" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="javascript:WebSocketSupport()">
+    <div id="ws_support"></div>
+    <div id="wrapper">
+        <div id="menu">
+          <h3 class="welcome"></h3>
+        </div>
+    
+    <div class="chat-container">
+        <div class="search-container">
+            <input id='input' type="text" placeholder="Search" />
+            
+        </div>
+        <div class="list">
+        <div id="conversation-list">
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Dorian Gray
+                </div>
+              
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                  Jack Sparrow  
+                </div>
+                
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    George Orwell
+                </div>
+               
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Oscar Wilde
+                </div>
+              
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Mr. Freeman
+                </div>
+               
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Sherlock Holmes
+                </div>
+                
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Yeshua
+                </div>
+               
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Anthony Edward Stark
+                </div>
+               
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    Azazel
+                </div>
+                
+            </div>
+            <div class="conversation">
+                <img src="https://thevoicefinder.com/wp-content/themes/the-voice-finder/images/default-img.png" alt="Profile photo">
+                <div class="users">
+                    William S. Burroughs 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+        <div class="new-message-container">
+            <a href="#">+</a>
+        </div>
+        
+        <div class="chat-message-list">
+           <div class="fon">
+            <div id="chatbox"></div>
+            
+        </div>
+            <div class="message-row other-message">
+                
+                <div class="message-text">
+                    
+                    <div class="name">Hela</div>  idk
+                </div>
+                <div class="message-time">14:05<br/>
+                    Apr 22
+                </div>
+            </div>
+            <div class="message-row other-message">
+                
+                <div class="message-text">
+                    
+                    <div class="name">Azazel</div> do u think its better?
+                </div>
+                <div class="message-text">
+                    cuz im not sure
+                </div>
+                <div class="message-time">14:03<br/>
+                    Apr 22
+                </div>
+                
+            
+        </div>
+    </div>
+    
+        <div class="chat-form">
+            <input name="chatname" id="chatname" type="text" placeholder="name">
+            <input name="msg" type="text" id="msg" placeholder="type a message">
+            <input name="sendmsg" type="image" id="sendmsg" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49589/preview.svg"  class="btTxt submit" value="Send" onclick="doSend(document.getElementById('msg').value)" />
+        </div>
+    
+    </div>
+</body>
+</html>
